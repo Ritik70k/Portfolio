@@ -26,7 +26,7 @@ body {
 
 
 .head {
-     position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -39,22 +39,12 @@ body {
 
 
 }
-
-.cont_btn {
-    width: 6rem;
-    height: 1.7rem;
-    background: var(--grad);
-    color: white;
-    font-weight: 500;
-    border: none;
-    border-radius: var(--brad);
-    text-align: center;
-    cursor: pointer;
+.disabled-link{
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
-.cont_btn:hover {
-    box-shadow: var(--shadow);
-}
 
 .gradient-text {
     background: var(--grad);

@@ -1,0 +1,142 @@
+.contact-section{
+    width:99vw;
+    min-height:100vh;
+    padding:40px;
+    background:#11172c7e;
+    color:white;
+}
+
+.contact-title{
+    text-align:center;
+    font-size:3rem;
+}
+
+.contact-title span{
+    background:var(--grad);
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.contact-line{
+    width:70%;
+    height:3px;
+    margin:15px auto 40px;
+    background:var(--grad);
+    border-radius:50px;
+    box-shadow:var(--shadow);
+}
+
+.contact-container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    gap:30px;
+}
+
+.contact-left,
+.contact-right{
+    flex:1;
+}
+
+.contact-info-card,
+.contact-form{
+    background:rgba(99,102,241,.05);
+    border:1px solid rgba(148,163,184,.25);
+    border-radius:20px;
+    padding:30px;
+}
+
+.contact-info-card h2{
+    margin-bottom:20px;
+    color:#a855f7;
+}
+
+.contact-info-card p{
+    color:var(--text2);
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.contact-details{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:#94a3b8;
+}
+
+.contact-item i{
+    color:#818cf8;
+    font-size:1.1rem;
+}
+
+.contact-socials{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+}
+
+.contact-socials a{
+    text-decoration:none;
+}
+
+.contact-socials i{
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    border:1px solid rgba(148,163,184,.25);
+    background:rgba(99,102,241,.05);
+    color:#94a3b8;
+    transition:.3s;
+}
+
+.contact-socials i:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+    background:var(--grad);
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background:#080d1e;
+    border:1px solid rgba(148,163,184,.25);
+    border-radius:12px;
+    padding:14px;
+    color:white;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#a855f7;
+}
+
+.send-btn{
+    height:50px;
+    border:none;
+    border-radius:35px;
+    background:var(--grad);
+    color:white;
+    cursor:pointer;
+    font-weight:700;
+    transition:.3s;
+}
+
+.send-btn:hover{
+    box-shadow:var(--shadow);
+    transform:translateY(-3px);
+}
