@@ -1,0 +1,624 @@
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    /*  NAVIGATION  */
+    .head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        background: rgba(5, 8, 22, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    nav h4 {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    #navLinks {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(8, 13, 30, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        z-index: 999;
+    }
+
+    #navLinks.active {
+        display: flex;
+    }
+
+    #navLinks li {
+        width: 100%;
+        margin: 0;
+        list-style: none;
+    }
+
+    #navLinks li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    /*  HERO SECTION  */
+    .container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 1.5rem auto;
+        gap: 2.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        height: auto;
+        flex: none;
+    }
+
+    .hero-left {
+        margin: 0;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .hero-name {
+        font-size: 2.3rem;
+    }
+
+    .role-pre {
+        font-size: 1.25rem;
+    }
+
+    .hero-bio {
+        max-width: 800px;
+        margin: 0.5rem auto 0;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .hero-btn {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .btn {
+        width: 220px;
+        height: 50px;
+        padding: 0 20px;
+        white-space: nowrap;
+        font-size: 0.9rem;
+        margin-top: 0;
+    }
+
+    .socials {
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 1.5rem;
+        gap: 2rem;
+    }
+
+    .seperator,
+    .sep,
+    .scroll-ind {
+        display: none;
+    }
+
+    /*  PROFILE IMAGE & FLOATING ICONS  */
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        margin: 2.5rem auto 0;
+        height: 380px;
+    }
+
+    .outer_cl {
+        width: 260px;
+        height: 260px;
+    }
+
+    .inner_cl,
+    .ch_inner_cl {
+        width: 95%;
+        height: 95%;
+    }
+
+    .profile-img {
+        width: 85%;
+        height: 85%;
+        transform: translateY(8px);
+    }
+
+    .fl_icon {
+        min-width: 70px;
+        height: 30px;
+        font-size: 0.75rem;
+        padding: 0 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .html {
+        top: 40%;
+        left: 5px;
+    }
+
+    .css {
+        top: 75%;
+        left: 35px;
+    }
+
+    .js {
+        bottom: 5%;
+        right: 110px;
+        width: 6.5rem;
+    }
+
+    .java {
+        bottom: 35%;
+        right: 5px;
+    }
+
+    .db {
+        top: 20%;
+        right: 20px;
+    }
+
+    /*  ABOUT SECTION  */
+    .container1 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 4rem 1.5rem 3rem;
+    }
+
+    .container1 h1 {
+        font-size: 2.3rem;
+        margin-top: 1rem;
+    }
+
+    .seperator2 {
+        width: 50%;
+        margin: 1rem auto 2rem;
+    }
+
+    .d_top {
+        margin-top: 2rem !important;
+        font-size: 1rem !important;
+        line-height: 1.6;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .clg_info {
+        margin: 3rem auto;
+        max-width: 900px;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .ab_box {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .ab_box span {
+        margin-left: 0 !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .edu_info {
+        width: 100%;
+        max-width: 900px;
+        margin: 2.5rem auto 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        height: auto;
+    }
+
+    .info_card {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .info_card:hover {
+        transform: scale(1.03) !important;
+    }
+
+    /*  SKILLS SECTION  */
+    .skills-section {
+        width: 100%;
+        min-height: auto;
+        padding: 4rem 1.5rem 3rem;
+    }
+
+    .skills-title {
+        font-size: 2.3rem;
+    }
+
+    .skills-line {
+        width: 50%;
+        margin: 0 auto 2.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .progress-card,
+    .learning-card {
+        max-width: 900px;
+        margin: 25px auto 0;
+        padding: 25px;
+    }
+
+    /*  CONTACT SECTION  */
+    .contact-section {
+        width: 100%;
+        min-height: auto;
+        padding: 4rem 1.5rem 3rem;
+    }
+
+    .contact-title {
+        font-size: 2.3rem;
+    }
+
+    .contact-line {
+        width: 50%;
+        margin: 15px auto 2.5rem;
+    }
+
+    .contact-container {
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        flex: none;
+    }
+
+    .contact-info-card,
+    .contact-form {
+        padding: 30px;
+    }
+
+    /*  FOOTER SECTION  */
+    .footer {
+        padding: 3.5rem 1.5rem 1rem;
+    }
+
+    .footer-container {
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        gap: 2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer-col {
+        min-width: 200px;
+    }
+}
+
+/* for mobile screen size - 768 */
+@media screen and (max-width: 768px) {
+
+    /*  HERO SECTION  */
+    .container {
+        gap: 2rem;
+        margin: 1rem auto;
+    }
+
+    .hero-name {
+        font-size: 2.1rem;
+    }
+
+    .hero-bio {
+        font-size: 0.95rem;
+        max-width: 95%;
+    }
+
+    /*  ABOUT SECTION  */
+    .clg_info {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .ab_box {
+        width: 100%;
+    }
+
+    .edu_info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* SKILLS SECTION */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* FOOTER SECTION  */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+/* small mobile screen size-480 */
+@media screen and (max-width: 480px) {
+
+    /* GLOBAL & HEADER */
+    body {
+        padding-top: 60px;
+    }
+
+    .head {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    nav h4 {
+        font-size: 1.15rem;
+    }
+
+    /* HERO SECTION  */
+    .hero-name {
+        font-size: 1.85rem;
+    }
+
+    .role-pre {
+        font-size: 1.1rem;
+    }
+
+    .hero-bio {
+        font-size: 0.9rem;
+    }
+
+    .hero-btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 240px;
+        height: 48px;
+        font-size: 0.85rem;
+        padding: 1.2rem;
+    }
+
+    .socials {
+        gap: 1.5rem;
+    }
+
+    /*  PROFILE IMAGE & FLOATING ICONS */
+    .right {
+        height: 320px;
+        max-width: 320px;
+        margin: 1.5rem auto 0;
+    }
+
+    .outer_cl {
+        width: 200px;
+        height: 200px;
+    }
+
+    .inner_cl,
+    .ch_inner_cl {
+        width: 95%;
+        height: 95%;
+    }
+
+    .fl_icon {
+        min-width: 60px;
+        height: 26px;
+        font-size: 0.65rem;
+        padding: 0 6px;
+    }
+
+    .html {
+        top: 40%;
+        left: 0px;
+    }
+
+    .css {
+        top: 75%;
+        left: 20px;
+    }
+
+    .js {
+        bottom: 5%;
+        right: 70px;
+        width: 5.5rem;
+    }
+
+    .java {
+        bottom: 35%;
+        right: 0px;
+    }
+
+    .db {
+        top: 15%;
+        right: 10px;
+    }
+
+    /*  ABOUT SECTION */
+    .container1 {
+        padding: 3rem 1rem 2.5rem;
+    }
+
+    .container1 h1 {
+        font-size: 1.9rem;
+    }
+
+    .seperator2 {
+        width: 65%;
+        margin-bottom: 1.5rem;
+    }
+
+    .ab_box {
+        padding: 15px;
+    }
+
+    .info_card {
+        padding: 20px 15px;
+    }
+
+    /*  SKILLS SECTION  */
+    .skills-section {
+        padding: 3rem 1rem 2.5rem;
+    }
+
+    .skills-title {
+        font-size: 1.9rem;
+    }
+
+    .skills-line {
+        width: 65%;
+    }
+
+    .skill-card {
+        padding: 15px;
+    }
+
+    .skill-tags span,
+    .learning-tags span {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .progress-card,
+    .learning-card {
+        padding: 20px 15px;
+    }
+
+    .progress-card h3,
+    .learning-card h3 {
+        font-size: 1.2rem;
+    }
+
+    /*  CONTACT SECTION  */
+    .contact-section {
+        padding: 3rem 1rem 2.5rem;
+    }
+
+    .contact-title {
+        font-size: 1.9rem;
+    }
+
+    .contact-line {
+        width: 65%;
+    }
+
+    .contact-info-card,
+    .contact-form {
+        padding: 20px 15px;
+    }
+
+    .contact-info-card h2 {
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .contact-socials {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contact-socials i {
+        width: 42px;
+        height: 42px;
+        font-size: 0.95rem;
+    }
+
+    /*  FOOTER SECTION */
+    .footer {
+        padding-top: 2.5rem;
+    }
+
+    .footer-col h3 {
+        font-size: 1.15rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        padding: 15px 10px;
+    }
+}

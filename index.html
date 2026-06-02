@@ -12,19 +12,27 @@
     <link rel="stylesheet" href="skill.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="mediaQuery.css">
 </head>
 
 <body>
     <header>
         <nav class="head">
-            <h4 class="gradient-text">Ritik<span> &#10847;</span></h4>
-            <ul>
+
+            <h4 class="gradient-text">Ritik<span>&#10847;</span></h4>
+
+            <div class="menu-btn" id="menuBtn">
+                ☰
+            </div>
+
+            <ul id="navLinks">
                 <li class="gradient-text"><a href="#home">Home</a></li>
                 <li class="gradient-text"><a href="#about">About me</a></li>
                 <li class="gradient-text"><a href="#skill">Skills</a></li>
                 <li class="gradient-text disabled-link"><a href="#">My Projects</a></li>
-                <li class="gradient-text"><a href="#contact">contact</a></li>
+                <li class="gradient-text"><a href="#contact">Contact</a></li>
             </ul>
+
         </nav>
     </header>
 
@@ -54,9 +62,12 @@
 
                         <!-- Buttons for download resume and for contact  -->
                         <div class="hero-btn">
-                            <a href="WhatsApp Image 2026-05-30 at 6.13.36 PM.jpeg" class="btn btn-primary"
-                                id="dlResume">
-                                <i class="fas fa-download"></i><span>Download Resume</span>
+                            <a href="assets/Resume.pdf" class="btn btn-primary" id="dlResume"
+                                download="Ritik_Kumar_Resume.pdf">
+
+                                <i class="fas fa-download"></i>
+                                <span>Download Resume</span>
+
                                 <div class="btn-shine"></div>
                             </a>
                             <a href="#contact" class="btn btn-secondary">
@@ -102,7 +113,7 @@
                         <div class="inner_cl">
 
                             <div class="ch_inner_cl">
-                                <img src="" alt="">
+                                <img src="images/profile.png" alt="Ritik Kumar" class="profile-img">
                             </div>
                         </div>
                     </div>
@@ -386,7 +397,7 @@
 
                     <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
 
-                        <input type="hidden" name="access_key" value="">
+                        <input type="hidden" name="access_key" value="66be6636-f9f8-4985-8d81-5dd6fc4acfb4">
 
                         <input type="hidden" name="from_name" value="Ritik Portfolio">
 

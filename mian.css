@@ -278,9 +278,25 @@
     border: 2px solid rgba(85, 0, 255, 0.567);
     width: 95%;
     height: 95%;
-    background-color:rgba(0, 145, 255, 0.084);
+    background: radial-gradient(
+    circle,
+    #0a0511 0%,
+    #170c2c 35%,
+    #0d0620 70%,
+    #050814 100%
+);
     border-radius: 50%;
     box-shadow: var(--shadow1);
+    overflow:hidden;
+}
+.profile-img{
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    border: none;
 }
 .skills{
     display: flex;
@@ -349,6 +365,11 @@
         transform: translateY(0);
     }
 }
+.html,.css,
+.js,.java,
+.db{
+    z-index: 5;
+}
 .html{
     top: 45%;
     left: 4%;
@@ -362,6 +383,7 @@
     bottom: 10%;
     right: 30%;
     width: 7rem;
+    
 }
 .java{
     animation: float 3.5s ease-in-out infinite;
