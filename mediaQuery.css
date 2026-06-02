@@ -166,8 +166,8 @@ html, body {
     }
 
     .profile-img {
-        width: 85%;
-        height: 85%;
+        width: 100%;
+        height: 100%;
         transform: translateY(8px);
     }
 
