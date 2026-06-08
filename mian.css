@@ -1,25 +1,52 @@
 :root {
-    --grad: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-    --bg2: #080d1e;
-    --brad: 35px;
-    --primary: #818cf8;
-    --text: rgba(0, 145, 255, 0.27);
-    --text2: #94a3b8;
-    --border: 2px solid white;
+    /* Backgrounds */
+    --bg: #0b1120;
+    --bg2: #111827;
+    --card: #1f2937;
+
+    /* Text */
+    --text: #f9fafb;
+    --text2: #9ca3af;
+
+    /* Accent */
+    --primary: #06b6d4;
+    --primary-hover: #22d3ee;
+
+    /* Secondary Accent */
+    --secondary: #3b82f6;
+
+    /* Borders */
+    --border2: rgba(6, 182, 212, 0.15);
+
+    /* Buttons / Gradients */
+    --grad: linear-gradient(
+        90deg,
+        #06b6d4 0%,
+        #3b82f6 100%
+    );
+
+    --grad-hover: linear-gradient(
+        90deg,
+        #22d3ee 0%,
+        #60a5fa 100%
+    );
+
+    /* Shadows */
     --shadow:
-        0 0 20px rgba(99, 102, 241, .5),
-        0 0 30px rgba(168, 85, 247, .5),
-        0 0 40px rgba(236, 72, 153, .5);
-    --transform: translateY(-5px) scale(1.1);
-    --transition: transform .35s ease-out;
-    --border2: 2px solid #2074ea6e;
+        0 0 12px rgba(6, 182, 212, 0.20),
+        0 0 24px rgba(59, 130, 246, 0.10);
+
+    /* Other Helper Variables */
+    --grad-text: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
+    --brad: 35px;
+    --text-trans: rgba(6, 182, 212, 0.15);
+    --border: 1px solid rgba(6, 182, 212, 0.2);
+    --transform: translateY(-5px) scale(1.05);
+    --transition: all .35s ease-out;
 
     --shadow1:
-        0 0 5px rgba(99, 102, 241, .5),
-        0 0 10px rgba(168, 85, 247, .5),
-        0 0 20px rgba(236, 72, 153, .5);
-
-   
+        0 0 4px rgba(6, 182, 212, 0.15),
+        0 0 8px rgba(59, 130, 246, 0.10);
 }
 
 /* Left side box  */
@@ -80,7 +107,7 @@
     width: 1.5rem;
     height: 3rem;
     border: var(--border);
-    border-color: var(--text);
+    border-color: var(--text-trans);
     border-radius: var(--brad);
 }
 
@@ -103,8 +130,8 @@
 }
 
 .typing-text {
-    background: linear-gradient(135deg, #8385f3 0%, #a855f7 50%, #ec4899 100%);
-    border-right: 3px solid #7c5cff;
+    background: var(--grad-text);
+    border-right: 3px solid var(--primary);
     padding-right: 5px;
     background-clip: text;
     animation: blink 0.7s infinite;
@@ -185,7 +212,7 @@
     height: 2rem;
     border-radius: 1rem;
     color: white;
-    background: var(--grad);
+    background: var(--grad-text);
     gap: .3rem;
     font-size: .8rem;
     padding: 1.5rem;
@@ -209,8 +236,8 @@
     border: var(--border);
     padding: 1rem;
     border-radius: 50%;
-    border: 1px solid var(--text);
-    background: rgba(99, 102, 241, 0.07);
+    border: 1px solid var(--text-trans);
+    background: rgba(6, 182, 212, 0.07);
     color: var(--text2);
     font-weight: bolder;
     transition: var(--transition);
@@ -219,7 +246,7 @@
 }
 
 .so-link:hover {
-    background: var(--grad);
+    background: var(--grad-text);
     color: white;
     transform: var(--transform);
     box-shadow: var(--shadow);
@@ -266,7 +293,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgba(216, 112, 147, 0.567);
+    border: 2px solid rgba(6, 182, 212, 0.4);
     width: 95%;
     height: 95%;
     /* margin-left: rem; */
@@ -275,15 +302,15 @@
 }
 
 .ch_inner_cl {
-    border: 2px solid rgba(85, 0, 255, 0.567);
+    border: 2px solid rgba(59, 130, 246, 0.4);
     width: 95%;
     height: 95%;
     background: radial-gradient(
     circle,
-    #0a0511 0%,
-    #170c2c 35%,
-    #0d0620 70%,
-    #050814 100%
+    #1e293b 0%,
+    #111827 35%,
+    #0b1120 70%,
+    #070a12 100%
 );
     border-radius: 50%;
     box-shadow: var(--shadow1);
@@ -330,7 +357,7 @@
     padding: 6px;
     text-align: center;
     color: var(--text2);
-    background-color: var(--text);
+    background-color: var(--text-trans);
     border-radius: 10px;
 }
 .css, .db{

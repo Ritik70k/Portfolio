@@ -1,23 +1,61 @@
 :root {
-    --grad: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-    --bg2: #080d1e;
-    --brad: 35px;
-    --primary: #818cf8;
-    --text: rgba(0, 145, 255, 0.27);
-    --text2: #94a3b8;
+    /* Backgrounds */
+    --bg: #0b1120;
+    --bg2: #111827;
+    --card: #1f2937;
+
+    /* Text */
+    --text: #f9fafb;
+    --text2: #9ca3af;
+
+    /* Accent */
+    --primary: #06b6d4;
+    --primary-hover: #22d3ee;
+
+    /* Secondary Accent */
+    --secondary: #3b82f6;
+
+    /* Borders */
+    --border2: rgba(6, 182, 212, 0.15);
+
+    /* Buttons / Gradients */
+    --grad: linear-gradient(
+        90deg,
+        #06b6d4 0%,
+        #3b82f6 100%
+    );
+
+    --grad-text: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
+    --grad-hover: linear-gradient(
+        90deg,
+        #22d3ee 0%,
+        #60a5fa 100%
+    );
+
+    /* Shadows */
     --shadow:
-        0 0 20px rgba(99, 102, 241, .5),
-        0 0 30px rgba(168, 85, 247, .5),
-        0 0 40px rgba(236, 72, 153, .5);
+        0 0 12px rgba(6, 182, 212, 0.20),
+        0 0 24px rgba(59, 130, 246, 0.10);
+
+    /* Other Helper Variables */
+    --brad: 35px;
+    --text-trans: rgba(6, 182, 212, 0.15);
+    --border: 1px solid rgba(6, 182, 212, 0.2);
+    --transform: translateY(-5px) scale(1.05);
+    --transition: all .35s ease-out;
+
+    --shadow1:
+        0 0 4px rgba(6, 182, 212, 0.15),
+        0 0 8px rgba(59, 130, 246, 0.10);
 }
 
 .container1 {
     width: 99vw;
     height: 100vh;
-    color: white;
+    color: var(--text);
     text-align: center;
     font-size: x-large;
-    background-color: #11172c7e;
+    background-color: var(--bg);
 }
 
 .container1 h1 {
@@ -25,7 +63,7 @@
 }
 
 .container1 h1 span {
-    background: var(--grad);
+    background: var(--grad-text);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -68,14 +106,14 @@
 }
 
 .ab_box:hover {
-    box-shadow: 0 0 20px rgba(99, 102, 241, .5);
-    background-color: #10102861;
+    box-shadow: var(--shadow);
+    background-color: rgba(6, 182, 212, 0.03);
 }
 
 .ab_box span {
     margin-left: -87.5%;
     font-size: small;
-    color: rgba(0, 145, 255, 0.568);
+    color: var(--primary);
     font-weight: 500;
 }
 
@@ -88,7 +126,7 @@
 
 .edu_info h3 {
     margin-top: 1rem;
-    color: #818cf8;
+    color: var(--primary);
     ;
 }
 
@@ -112,7 +150,7 @@
 }
 
 .ab_box p b {
-    color: rgba(28, 28, 231, 0.733);
+    color: var(--secondary);
 }
 
 .one {
@@ -121,7 +159,8 @@
 }
 
 .one:hover {
-    background-color: #0d0f1af2;
+    background-color: var(--bg2);
+    box-shadow: var(--shadow);
     transform: scale(1.2);
 }
 
@@ -133,7 +172,8 @@
 
 .two:hover,
 .three:hover {
-    background-color: #0d0f1af2;
+    background-color: var(--bg2);
+    box-shadow: var(--shadow);
     transform: scale(1.2);
 }
 
@@ -143,7 +183,8 @@
 }
 
 .four:hover {
-    background-color: #0d0f1af2;
+    background-color: var(--bg2);
+    box-shadow: var(--shadow);
     transform: scale(1.2);
 }
 

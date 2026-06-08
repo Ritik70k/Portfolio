@@ -8,20 +8,61 @@ html{
 }
 
 :root {
-    --grad: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-    --bg2: #080d1e;
-    --brad: 35px;
+    /* Backgrounds */
+    --bg: #0b1120;
+    --bg2: #111827;
+    --card: #1f2937;
+
+    /* Text */
+    --text: #f9fafb;
+    --text2: #9ca3af;
+
+    /* Accent */
+    --primary: #06b6d4;
+    --primary-hover: #22d3ee;
+
+    /* Secondary Accent */
+    --secondary: #3b82f6;
+
+    /* Borders */
+    --border2: rgba(6, 182, 212, 0.15);
+
+    /* Buttons / Gradients */
+    --grad: linear-gradient(
+        90deg,
+        #06b6d4 0%,
+        #3b82f6 100%
+    );
+
+    --grad-text: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
+    --grad-hover: linear-gradient(
+        90deg,
+        #22d3ee 0%,
+        #60a5fa 100%
+    );
+
+    /* Shadows */
     --shadow:
-        0 0 10px rgba(99, 102, 241, .5),
-        0 0 20px rgba(168, 85, 247, .5),
-        0 0 30px rgba(236, 72, 153, .5);
+        0 0 12px rgba(6, 182, 212, 0.20),
+        0 0 24px rgba(59, 130, 246, 0.10);
+
+    /* Other Helper Variables */
+    --brad: 35px;
+    --text-trans: rgba(6, 182, 212, 0.15);
+    --border: 1px solid rgba(6, 182, 212, 0.2);
+    --transform: translateY(-5px) scale(1.05);
+    --transition: all .35s ease-out;
+
+    --shadow1:
+        0 0 4px rgba(6, 182, 212, 0.15),
+        0 0 8px rgba(59, 130, 246, 0.10);
 }
 
 body {
-    background: var(--bg2);
+    background: var(--bg);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top: 65px;
-    
+    color: var(--text);
 }
 
 
@@ -34,10 +75,12 @@ body {
     padding: 10px;
     font-size: large;
     font-weight: 500;
-    background: rgba(5, 8, 22, .88);
-    border: 1px  solid rgba(17, 11, 47, 0.933);
+    background: rgba(11, 17, 32, 0.88);
+    border-bottom: 1px solid var(--border2);
+}
 
-
+.menu-btn {
+    display: none;
 }
 .disabled-link{
     pointer-events: none;
@@ -47,7 +90,8 @@ body {
 
 
 .gradient-text {
-    background: var(--grad);
+    background: var(--grad-text);
+    -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -82,4 +126,10 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    display: inline-block;
+}
+nav ul li a:hover {
+    filter: drop-shadow(0 0 5px rgba(6, 182, 212, 0.6));
 }
