@@ -1,12 +1,12 @@
-
-html, body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
-    
+
     /*  NAVIGATION  */
     .head {
         position: fixed;
@@ -411,6 +411,12 @@ html, body {
         gap: 2.5rem;
     }
 
+    .wrap-foot {
+        display: flex;
+        margin: 0 -69px;
+
+    }
+
     .footer-col ul {
         display: flex;
         flex-direction: column;
@@ -620,5 +626,15 @@ html, body {
     .footer-bottom {
         font-size: 0.8rem;
         padding: 15px 10px;
+    }
+
+    .footer-col p {
+        width: 75vw;
+        margin-left: -34px;
+    }
+
+    .wrap-foot {
+        margin-right: -69px;
+
     }
 }
