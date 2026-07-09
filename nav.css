@@ -6,98 +6,99 @@
 html {
     scroll-behavior: smooth;
 }
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
 
+body::-webkit-scrollbar {
+    display: none;
+}
 :root {
-    /*Backgrounds*/
-    --bg:   #0b1120;
-    --bg2:  #111827;
-    --card: #1f2937;
+    
+    --bg:   #BDD9D7;          
+    --bg2:  #CBE2E0;          
+    --card: #D8ECEB;         
 
-    /* Text */
-    --text:  #f9fafb;
-    --text2: #9ca3af;
+    
+    --text:  #03363D;        
+    --text2: #2E6B70;         
 
-    --primary:       #06b6d4;
-    --primary-hover: #22d3ee;
+    --primary:       #0E7C7B; 
+    --primary-hover: #0A5E5D; 
 
-    --secondary:        #3b82f6;
-    --secondary-hover:  #60a5fa;
-    --secondary-border: rgba(59, 130, 246, 0.4);  
+    --secondary:        #1A6B8A; 
+    --secondary-hover:  #155A76; 
+    --secondary-border: rgba(26, 107, 138, 0.35);
 
-    /* Gradients */
-    --grad: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
+    --grad: linear-gradient(90deg, #0E7C7B 0%, #1A6B8A 100%);
 
-    --grad-hover: linear-gradient(90deg, #22d3ee 0%, #60a5fa 100%);
+    --grad-hover: linear-gradient(90deg, #0A5E5D 0%, #155A76 100%);
 
-    --grad-text: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
+    --grad-text: linear-gradient(90deg, #0E7C7B 0%, #1A6B8A 100%);
 
-    /* Radial gradient used in the profile circle */
+    /* Radial used in the profile image circle */
     --grad-radial: radial-gradient(
         circle,
-        #1e293b 0%,
-        #111827 35%,
-        #0b1120 70%,
-        #070a12 100%
+        #CBE2E0 0%,
+        #BDD9D7 35%,
+        #AECFCD 70%,
+        #9DC4C2 100%
     );
 
-    /*Borders */
-    --border:  1px solid rgba(6, 182, 212, 0.2);
-    --border2: rgba(6, 182, 212, 0.15);
+    --border:  1px solid rgba(14, 124, 123, 0.25);
+    --border2: rgba(14, 124, 123, 0.18);
 
-    /* Shadows  */
     --shadow:
-        0 0 12px rgba(6, 182, 212, 0.20),
-        0 0 24px rgba(59, 130, 246, 0.10);
+        0 4px 16px rgba(3, 54, 61, 0.12),
+        0 8px 32px rgba(3, 54, 61, 0.08);
 
     --shadow1:
-        0 0 4px rgba(6, 182, 212, 0.15),
-        0 0 8px rgba(59, 130, 246, 0.10);
+        0 2px 8px  rgba(3, 54, 61, 0.10),
+        0 4px 12px rgba(3, 54, 61, 0.06);
 
-    /*  Semi-transparent tints */
-    --text-trans:    rgba(6, 182, 212, 0.15);
-    --primary-tint1: rgba(6, 182, 212, 0.03);   
-    --primary-tint2: rgba(6, 182, 212, 0.05);   
-    --primary-tint3: rgba(6, 182, 212, 0.07);   
-    --primary-tint4: rgba(6, 182, 212, 0.08);   
-    --primary-tint5: rgba(6, 182, 212, 0.15);   
-    --white-tint:    rgba(255, 255, 255, 0.05);  
+    --text-trans:    rgba(14, 124, 123, 0.14);
+    --primary-tint1: rgba(14, 124, 123, 0.04);
+    --primary-tint2: rgba(14, 124, 123, 0.07);
+    --primary-tint3: rgba(14, 124, 123, 0.10);
+    --primary-tint4: rgba(14, 124, 123, 0.12);
+    --primary-tint5: rgba(14, 124, 123, 0.20);
+    --white-tint:    rgba(3, 54, 61, 0.05);
 
-    /*  Nav / Overlay backgrounds */
-    --nav-bg:        rgba(11, 17, 32, 0.88);
-    --nav-bg-solid:  rgba(11, 17, 32, 0.95);
-    --nav-bg-mobile: rgba(11, 17, 32, 0.98);
+    --nav-bg:        rgba(189, 217, 215, 0.88);
+    --nav-bg-solid:  rgba(189, 217, 215, 0.96);
+    --nav-bg-mobile: rgba(189, 217, 215, 0.99);
 
-    /*  Border Radius */
-    --brad:    35px;   
-    --brad-md: 20px;   
-    --brad-sm: 12px;   
-    --brad-xs: 10px;   
+    --brad:    35px;
+    --brad-md: 20px;
+    --brad-sm: 12px;
+    --brad-xs: 10px;
 
-    /*Transitions / Transforms */
     --transition: all .35s ease-out;
     --transform:  translateY(-5px) scale(1.05);
 
-    /*Brand / Tech Icon Colors*/
-    --color-html:   #E34F26;
-    --color-css:    #1572B6;
-    --color-js:     #F7DF1E;
-    --color-java:   #f89820;
-    --color-sql:    #00758F;
-    --color-oop:    #8B5CF6;
-    --color-dsa:    #06B6D4;
-    --color-dbms:   #00C4CC;
-    --color-git:    #F05032;
-    --color-github: #94a3b8;
-    --color-vscode: #007ACC;
-    --color-sqlalt: #4479A1;
+    --color-html:   #C9421D; 
+    --color-css:    #1260A0;
+    --color-js:     #C9A800;  
+    --color-java:   #D07800;
+    --color-sql:    #005F74;
+    --color-oop:    #6D3FC4;
+    --color-dsa:    #0E7C7B;  
+    --color-dbms:   #007F85;
+    --color-git:    #C0391B;
+    --color-vscode: #0062A8;
+    --color-sqlalt: #2F6796;
+    --color-gsap:   #2E7D32;
 
-    /* Misc / Layout*/
-    --contact-item-color: #94a3b8;
+    --contact-item-color: #2E6B70;
     --social-icon-size:   50px;
-    --icon-dropshadow:    rgba(6, 182, 212, 0.6);
-    --footer-link-shadow: rgba(6, 182, 212, 0.4);
-    --ab-hover-bg:        rgba(6, 182, 212, 0.03);
-    --cl-icon-color:      rgba(197, 195, 195, 0.803);
+    --icon-dropshadow:    rgba(14, 124, 123, 0.50);
+    --footer-link-shadow: rgba(14, 124, 123, 0.35);
+    --ab-hover-bg:        rgba(14, 124, 123, 0.06);
+    --cl-icon-color:      rgba(3, 54, 61, 0.45);
 }
 
 

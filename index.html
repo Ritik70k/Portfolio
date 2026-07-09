@@ -23,7 +23,9 @@
             <h4 class="gradient-text">Ritik<span>&#10847;</span></h4>
 
             <div class="menu-btn" id="menuBtn">
-                ☰
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
             <ul id="navLinks">
@@ -40,20 +42,36 @@
     <main>
         <!-- Home section  -->
         <section id="home">
-            <!-- Left side container -->
+
+            <!-- Ambient background layer -->
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-blob hero-blob--1"></div>
+                <div class="hero-blob hero-blob--2"></div>
+                <div class="hero-dot-grid"></div>
+            </div>
+
             <div class="container">
-                <!-- //left side box inside container -->
+
+                <!-- Left: Text content -->
                 <div class="left">
                     <div class="hero-left">
+
                         <div class="hero-greet">
                             <span class="greet-line"></span>
                             <p>Hello, World! 🙋‍♂️</p>
                         </div>
-                        <h1 class="hero-name">I'm <span class="gradient-text">Ritik Kumar</span></h1>
+
+                        <h1 class="hero-name">
+                            <span class="word gradient-text">I'm</span>
+                            <span class="word gradient-text">Ritik</span>
+                            <span class="word gradient-text">Kumar</span>
+                        </h1>
+
                         <div class="hero-roles">
                             <span class="role-pre">A passionate </span>
                             <span class="typing-text" id="typed"></span>
                         </div>
+
                         <p class="hero-bio">
                             A passionate developer on a journey through modern web development —
                             crafting elegant, high-performance solutions with <strong>JavaScript</strong>,
@@ -61,22 +79,20 @@
                             one line of code at a time.
                         </p>
 
-                        <!-- Buttons for download resume and for contact  -->
                         <div class="hero-btn">
-                            <a href="images/Ritik_Kumar_Resume.pdf" class="btn btn-primary" id="dlResume"
+                            <a href="assets/Resume.pdf" class="btn btn-primary" id="dlResume"
                                 download="Ritik_Kumar_Resume.pdf">
-
                                 <i class="fas fa-download"></i>
                                 <span>Download Resume</span>
-
                                 <div class="btn-shine"></div>
                             </a>
                             <a href="#contact" class="btn btn-secondary">
-                                <i class="fas fa-paper-plane"></i><span>Contact Me</span>
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Contact Me</span>
                             </a>
                         </div>
 
-                        <!-- Social media links -->
+                        <!-- Social links -->
                         <div class="socials">
                             <a href="https://github.com/Ritik70k" target="_blank" rel="noopener" class="si"
                                 aria-label="GitHub"><i class="fab fa-github so-link"></i></a>
@@ -87,40 +103,51 @@
                             <a href="https://www.instagram.com/priyadar_shi_ritik/" target="_blank" rel="noopener"
                                 class="si" aria-label="Instagram"><i class="fab fa-instagram so-link"></i></a>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- seperator for seperate left and right box-->
-                <div class="sep">
-                    <div class="seperator"></div>
-                    <div class="scroll-ind">
-                        <div class="sc-mouse">
-                            <div class="sc-wheel"></div>
-                        </div>
-                        <span>Scroll Down</span>
-                    </div>
-                </div>
-
-                <!-- Right box inside container  -->
+                <!-- Right = Portrait card + horizontal tech stack -->
                 <div class="right">
-                    <div class="skills">
-                        <div class="fl_icon html"><i class="fa-brands fa-html5"></i> HTML</div>
-                        <div class="fl_icon css"><i class="fa-brands fa-css3-alt"></i> CSS</div>
-                        <div class="fl_icon js"><i class="fa-brands fa-js"></i> JavaScript</div>
-                        <div class="fl_icon java"><i class="fa-brands fa-java"></i> Java</div>
-                        <div class="fl_icon db"><i class="fa-solid fa-database"></i> SQL</div>
-                    </div>
-                    <div class="outer_cl">
-                        <div class="inner_cl">
 
-                            <div class="ch_inner_cl">
-                                <img src="images/profile.png" alt="Ritik Kumar" class="profile-img">
-                            </div>
+                    <div class="portrait-card">
+                        <img src="images/profile.png" alt="Ritik Kumar" class="profile-img">
+                        <div class="portrait-card__shine" aria-hidden="true"></div>
+                    </div>
+
+                    <!-- horizontal Tech Stack section -->
+                    <div class="tech-stack-row">
+                        <div class="tech-pill html">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="tech-pill css">
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="tech-pill js">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-pill java">
+                            <i class="fa-brands fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-pill db">
+                            <i class="fa-solid fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="tech-pill gsap">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>GSAP</span>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </section>
+
 
         <!-- About section  -->
         <section id="about">
@@ -134,13 +161,13 @@
                 </p>
                 <div class="clg_info">
 
-                    <div class="ab_box">
+                    <div class="abox ab_box">
                         <span>Aug 2024</span>
                         <p><b>Started B.tech at Parul University : </b>Enrolled in Computer Science Engineering. Began
                             learning programing fundamentals, C, and core CS concepts like data structures and
                             algorithms.</p>
                     </div>
-                    <div class="ab_box">
+                    <div class="bbox ab_box">
                         <span>March 2025</span>
                         <p><b>Frontend Deep : </b>Proficient in HTML5 and CSS3 with experience building responsive web
                             projects using Flexbox and CSS Grid. Familiar with JavaScript fundamentals and actively
@@ -213,7 +240,7 @@
 
             <div class="skills-grid">
 
-                <div class="skill-card">
+                <div class="askill skill-card">
                     <h3>Frontend</h3>
 
                     <div class="skill-tags">
@@ -223,7 +250,7 @@
                     </div>
                 </div>
 
-                <div class="skill-card">
+                <div class="bskill skill-card">
                     <h3>Programming</h3>
 
                     <div class="skill-tags">
@@ -233,7 +260,7 @@
                     </div>
                 </div>
 
-                <div class="skill-card">
+                <div class="askill skill-card">
                     <h3>Database</h3>
 
                     <div class="skill-tags">
@@ -242,7 +269,7 @@
                     </div>
                 </div>
 
-                <div class="skill-card">
+                <div class="bskill skill-card">
                     <h3>Tools</h3>
 
                     <div class="skill-tags">
@@ -407,7 +434,7 @@
 
             <div class="contact-container">
 
-                <!-- Left Side of contact for social connet-->
+                <!-- Left Side of contact for social contact-->
 
                 <div class="contact-left">
 
@@ -567,6 +594,13 @@
         </div>
 
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 
