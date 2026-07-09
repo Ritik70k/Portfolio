@@ -1,55 +1,4 @@
-:root {
-    /* Backgrounds */
-    --bg: #0b1120;
-    --bg2: #111827;
-    --card: #1f2937;
 
-    /* Text */
-    --text: #f9fafb;
-    --text2: #9ca3af;
-
-    /* Accent */
-    --primary: #06b6d4;
-    --primary-hover: #22d3ee;
-
-    /* Secondary Accent */
-    --secondary: #3b82f6;
-
-    /* Borders */
-    --border2: rgba(6, 182, 212, 0.15);
-
-    /* Buttons / Gradients */
-    --grad: linear-gradient(
-        90deg,
-        #06b6d4 0%,
-        #3b82f6 100%
-    );
-
-    --grad-hover: linear-gradient(
-        90deg,
-        #22d3ee 0%,
-        #60a5fa 100%
-    );
-
-    /* Shadows */
-    --shadow:
-        0 0 12px rgba(6, 182, 212, 0.20),
-        0 0 24px rgba(59, 130, 246, 0.10);
-
-    /* Other Helper Variables */
-    --grad-text: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
-    --brad: 35px;
-    --text-trans: rgba(6, 182, 212, 0.15);
-    --border: 1px solid rgba(6, 182, 212, 0.2);
-    --transform: translateY(-5px) scale(1.05);
-    --transition: all .35s ease-out;
-
-    --shadow1:
-        0 0 4px rgba(6, 182, 212, 0.15),
-        0 0 8px rgba(59, 130, 246, 0.10);
-}
-
-/* Left side box  */
 .container {
     height: 80vh;
     width: 90vw;
@@ -78,7 +27,6 @@
     color: var(--text2);
     margin-bottom: 1rem;
     font-size: .8rem;
-
 }
 
 .scroll-ind {
@@ -90,17 +38,9 @@
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
 }
 
 .sc-mouse {
@@ -115,11 +55,10 @@
     width: .35rem;
     height: .7rem;
     margin-left: .45rem;
-    border-radius: 12px;
+    border-radius: var(--brad-sm);
     margin-top: .2rem;
     background: var(--grad);
 }
-
 
 .left,
 .right {
@@ -136,13 +75,10 @@
     background-clip: text;
     animation: blink 0.7s infinite;
     -webkit-text-fill-color: transparent;
-
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+    50% { border-color: transparent; }
 }
 
 .typed-cursor {
@@ -155,7 +91,6 @@
     gap: 2rem;
     margin-top: 1rem;
     margin-left: 1rem;
-
 }
 
 .hero-greet {
@@ -233,16 +168,13 @@
 }
 
 .so-link {
-    border: var(--border);
     padding: 1rem;
     border-radius: 50%;
     border: 1px solid var(--text-trans);
-    background: rgba(6, 182, 212, 0.07);
+    background: var(--primary-tint3);
     color: var(--text2);
     font-weight: bolder;
     transition: var(--transition);
-
-
 }
 
 .so-link:hover {
@@ -252,9 +184,6 @@
     box-shadow: var(--shadow);
 }
 
-
-
-/* Right side Box  */
 .right {
     display: flex;
     justify-content: center;
@@ -275,48 +204,33 @@
 }
 
 @keyframes float-cl {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
-/* background-color:rgba(0, 145, 255, 0.084); */
 .inner_cl {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgba(6, 182, 212, 0.4);
+    border: 2px solid var(--text-trans);
     width: 95%;
     height: 95%;
-    /* margin-left: rem; */
     border-radius: 50%;
     box-shadow: var(--shadow1);
 }
 
 .ch_inner_cl {
-    border: 2px solid rgba(59, 130, 246, 0.4);
+    border: 2px solid var(--secondary-border);
     width: 95%;
     height: 95%;
-    background: radial-gradient(
-    circle,
-    #1e293b 0%,
-    #111827 35%,
-    #0b1120 70%,
-    #070a12 100%
-);
+    background: var(--grad-radial);
     border-radius: 50%;
     box-shadow: var(--shadow1);
-    overflow:hidden;
+    overflow: hidden;
 }
-.profile-img{
+
+.profile-img {
     width: 95%;
     height: 100%;
     object-fit: cover;
@@ -325,100 +239,58 @@
     margin: auto;
     border: none;
 }
-.skills{
+
+.skills {
     display: flex;
     align-items: center;
     gap: 13px;
-    
-}
-.fa-html5 {
-  color: #E34F26;
 }
 
-.fa-css3-alt {
-  color: #1572B6;
-}
+.fa-html5    { color: var(--color-html); }
+.fa-css3-alt { color: var(--color-css);  }
+.fa-js       { color: var(--color-js);   }
+.fa-java     { color: var(--color-java); }
+.fa-database { color: var(--color-sql);  }
 
-.fa-js {
-  color: #F7DF1E;
-  
-}
-.fa-java {
-  color: #f89820;
-}
-.fa-database {
-  color: #00758F;
-}
-.fl_icon{
-    border: 1px solid;
-    border-color: var(--text2);
+.fl_icon {
+    border: 1px solid var(--text2);
     position: absolute;
     width: 5rem;
     padding: 6px;
     text-align: center;
     color: var(--text2);
     background-color: var(--text-trans);
-    border-radius: 10px;
+    border-radius: var(--brad-xs);
 }
-.css, .db{
+
+.css, .db {
     animation: flot_ic 3.5s ease-in-out infinite;
 }
-@keyframes flot_ic{
-    0% {
-        transform: translateY(0);
-    }
 
-    50% {
-        transform:translateX(10px) translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+@keyframes flot_ic {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateX(10px) translateY(-10px); }
+    100% { transform: translateY(0); }
 }
-.html, .js{
+
+.html, .js {
     animation: flot_ic2 3.5s ease-in-out infinite;
 }
-@keyframes flot_ic2{
-    0% {
-        transform: translateY(0);
-    }
 
-    50% {
-        transform:translateX(-10px) translateY(15px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+@keyframes flot_ic2 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateX(-10px) translateY(15px); }
+    100% { transform: translateY(0); }
 }
-.html,.css,
-.js,.java,
-.db{
+
+.html, .css,
+.js, .java,
+.db {
     z-index: 5;
 }
-.html{
-    top: 45%;
-    left: 4%;
 
-}
-.css{
-    top: 75%;
-    left: 16%;
-}
-.js{
-    bottom: 10%;
-    right: 30%;
-    width: 7rem;
-    
-}
-.java{
-    animation: float 3.5s ease-in-out infinite;
-    bottom: 35%;
-    right:5%;
-
-}
-.db{
-    top: 30%;
-    right: 5%;
-}
+.html { top: 45%;    left: 4%;             }
+.css  { top: 75%;    left: 16%;            }
+.js   { bottom: 10%; right: 30%; width: 7rem; }
+.java { animation: float 3.5s ease-in-out infinite; bottom: 35%; right: 5%; }
+.db   { top: 30%;    right: 5%;            }

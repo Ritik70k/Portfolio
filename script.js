@@ -1,5 +1,3 @@
-
-
 var typed = new Typed('#typed', {
     strings: ['Developer', 'Web Designer', 'Problem solver'],
     typeSpeed: 90,

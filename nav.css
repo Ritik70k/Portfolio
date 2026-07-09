@@ -3,60 +3,103 @@
     margin: 0;
     box-sizing: border-box;
 }
-html{
+html {
     scroll-behavior: smooth;
 }
 
 :root {
-    /* Backgrounds */
-    --bg: #0b1120;
-    --bg2: #111827;
+    /*Backgrounds*/
+    --bg:   #0b1120;
+    --bg2:  #111827;
     --card: #1f2937;
 
     /* Text */
-    --text: #f9fafb;
+    --text:  #f9fafb;
     --text2: #9ca3af;
 
-    /* Accent */
-    --primary: #06b6d4;
+    --primary:       #06b6d4;
     --primary-hover: #22d3ee;
 
-    /* Secondary Accent */
-    --secondary: #3b82f6;
+    --secondary:        #3b82f6;
+    --secondary-hover:  #60a5fa;
+    --secondary-border: rgba(59, 130, 246, 0.4);  
 
-    /* Borders */
-    --border2: rgba(6, 182, 212, 0.15);
+    /* Gradients */
+    --grad: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
 
-    /* Buttons / Gradients */
-    --grad: linear-gradient(
-        90deg,
-        #06b6d4 0%,
-        #3b82f6 100%
-    );
+    --grad-hover: linear-gradient(90deg, #22d3ee 0%, #60a5fa 100%);
 
     --grad-text: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
-    --grad-hover: linear-gradient(
-        90deg,
-        #22d3ee 0%,
-        #60a5fa 100%
+
+    /* Radial gradient used in the profile circle */
+    --grad-radial: radial-gradient(
+        circle,
+        #1e293b 0%,
+        #111827 35%,
+        #0b1120 70%,
+        #070a12 100%
     );
 
-    /* Shadows */
+    /*Borders */
+    --border:  1px solid rgba(6, 182, 212, 0.2);
+    --border2: rgba(6, 182, 212, 0.15);
+
+    /* Shadows  */
     --shadow:
         0 0 12px rgba(6, 182, 212, 0.20),
         0 0 24px rgba(59, 130, 246, 0.10);
 
-    /* Other Helper Variables */
-    --brad: 35px;
-    --text-trans: rgba(6, 182, 212, 0.15);
-    --border: 1px solid rgba(6, 182, 212, 0.2);
-    --transform: translateY(-5px) scale(1.05);
-    --transition: all .35s ease-out;
-
     --shadow1:
         0 0 4px rgba(6, 182, 212, 0.15),
         0 0 8px rgba(59, 130, 246, 0.10);
+
+    /*  Semi-transparent tints */
+    --text-trans:    rgba(6, 182, 212, 0.15);
+    --primary-tint1: rgba(6, 182, 212, 0.03);   
+    --primary-tint2: rgba(6, 182, 212, 0.05);   
+    --primary-tint3: rgba(6, 182, 212, 0.07);   
+    --primary-tint4: rgba(6, 182, 212, 0.08);   
+    --primary-tint5: rgba(6, 182, 212, 0.15);   
+    --white-tint:    rgba(255, 255, 255, 0.05);  
+
+    /*  Nav / Overlay backgrounds */
+    --nav-bg:        rgba(11, 17, 32, 0.88);
+    --nav-bg-solid:  rgba(11, 17, 32, 0.95);
+    --nav-bg-mobile: rgba(11, 17, 32, 0.98);
+
+    /*  Border Radius */
+    --brad:    35px;   
+    --brad-md: 20px;   
+    --brad-sm: 12px;   
+    --brad-xs: 10px;   
+
+    /*Transitions / Transforms */
+    --transition: all .35s ease-out;
+    --transform:  translateY(-5px) scale(1.05);
+
+    /*Brand / Tech Icon Colors*/
+    --color-html:   #E34F26;
+    --color-css:    #1572B6;
+    --color-js:     #F7DF1E;
+    --color-java:   #f89820;
+    --color-sql:    #00758F;
+    --color-oop:    #8B5CF6;
+    --color-dsa:    #06B6D4;
+    --color-dbms:   #00C4CC;
+    --color-git:    #F05032;
+    --color-github: #94a3b8;
+    --color-vscode: #007ACC;
+    --color-sqlalt: #4479A1;
+
+    /* Misc / Layout*/
+    --contact-item-color: #94a3b8;
+    --social-icon-size:   50px;
+    --icon-dropshadow:    rgba(6, 182, 212, 0.6);
+    --footer-link-shadow: rgba(6, 182, 212, 0.4);
+    --ab-hover-bg:        rgba(6, 182, 212, 0.03);
+    --cl-icon-color:      rgba(197, 195, 195, 0.803);
 }
+
 
 body {
     background: var(--bg);
@@ -64,7 +107,6 @@ body {
     padding-top: 65px;
     color: var(--text);
 }
-
 
 .head {
     position: fixed;
@@ -75,19 +117,19 @@ body {
     padding: 10px;
     font-size: large;
     font-weight: 500;
-    background: rgba(11, 17, 32, 0.88);
+    background: var(--nav-bg);
     border-bottom: 1px solid var(--border2);
 }
 
 .menu-btn {
     display: none;
 }
-.disabled-link{
+
+.disabled-link {
     pointer-events: none;
     opacity: 0.5;
     cursor: not-allowed;
 }
-
 
 .gradient-text {
     background: var(--grad-text);
@@ -101,7 +143,6 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 nav h4 {
@@ -130,6 +171,7 @@ nav ul li a {
     transition: var(--transition);
     display: inline-block;
 }
+
 nav ul li a:hover {
-    filter: drop-shadow(0 0 5px rgba(6, 182, 212, 0.6));
+    filter: drop-shadow(0 0 5px var(--icon-dropshadow));
 }

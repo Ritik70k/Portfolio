@@ -19,7 +19,7 @@ body {
         justify-content: space-between;
         align-items: center;
         z-index: 1000;
-        background: rgba(11, 17, 32, 0.95);
+        background: var(--nav-bg-solid);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
     }
@@ -43,7 +43,7 @@ body {
         top: 60px;
         left: 0;
         width: 100%;
-        background: rgba(11, 17, 32, 0.98);
+        background: var(--nav-bg-mobile);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         flex-direction: column;
@@ -363,7 +363,6 @@ body {
     }
 }
 
-/* for mobile screen size - 768 */
 @media screen and (max-width: 768px) {
 
     /*  HERO SECTION  */
@@ -425,10 +424,8 @@ body {
     }
 }
 
-/* small mobile screen size-480 */
 @media screen and (max-width: 480px) {
 
-    /* GLOBAL & HEADER */
     body {
         padding-top: 60px;
     }
@@ -474,7 +471,6 @@ body {
         gap: 1.5rem;
     }
 
-    /*  PROFILE IMAGE & FLOATING ICONS */
     .right {
         height: 320px;
         max-width: 320px;
@@ -547,7 +543,6 @@ body {
         padding: 20px 15px;
     }
 
-    /*  SKILLS SECTION  */
     .skills-section {
         padding: 3rem 1rem 2.5rem;
     }
