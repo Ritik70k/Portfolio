@@ -229,6 +229,13 @@ const projects = [
     description:"A frontend clone of the Omnifood landing page built with HTML and CSS. It recreates the original website's modern layout, smooth scrolling, interactive navigation, and visually appealing UI components to demonstrate frontend development and web design skills.",
     Plink:"https://github.com/Ritik70k/Web-clones/tree/main/omnifood-clone",
     LiveLink:"https://ritik70k.github.io/Web-clones/omnifood-clone/"
+  },
+  {
+    title:"Notes App",
+    icon:"fa-sticky-note",
+    description:"A simple Notes App built with HTML, CSS, and ReactJS. It allows users to create and delete notes, and provides a user-friendly interface for managing notes effectively.",
+    Plink:"https://github.com/Ritik70k/Notes-App-ReactJs",
+    LiveLink:"https://ritik70k.github.io/Notes-App-ReactJs/"
   }
 ];
 
