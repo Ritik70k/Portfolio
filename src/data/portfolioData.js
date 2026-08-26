@@ -10,8 +10,8 @@ export const profileInfo = {
   location: "Vadodara, Gujarat, India",
   email: "ritik707086@gmail.com",
   status: "Open for Internships & Collaborations",
-  resumeUrl: "assets/resume.PDF",
-  profileImg: "images/profile.png",
+  resumeUrl: "/assets/resume.PDF",
+  profileImg: "/images/profile.png",
   socials: {
     github: "https://github.com/Ritik70k",
     linkedin: "#",
