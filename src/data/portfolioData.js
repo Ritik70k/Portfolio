@@ -144,7 +144,7 @@ export const projectsData = [
     ],
     result: "Delivered a complete role-based music streaming platform with persistent user accounts, cloud-hosted media, artist publishing tools, album management, personalized music libraries, and an interactive browser-based audio player.",
     githubLink: "https://github.com/Ritik70k/RoleBasedMusicApplication",
-    liveLink: "",
+    liveLink: "https://rolebasedmusicapplication.netlify.app/",
     featured: true,
     thumbnail: musicAppThumb,
     mockupType: "music"
