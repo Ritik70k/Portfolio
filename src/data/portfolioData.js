@@ -1,5 +1,11 @@
 import musicAppThumb from './projectThumbnail/musicApplication.png';
 import plagiarismThumb from './projectThumbnail/plagiarism.png';
+import omnifoodThumb from './projectThumbnail/omnifood.png';
+import expenseTrackerThumb from './projectThumbnail/expenseTracker.png';
+import imageEditorThumb from './projectThumbnail/imageEditor.png';
+import notesApplicationThumb from './projectThumbnail/notesApplication.png';
+import kanbanBoardThumb from './projectThumbnail/kanbanBoard.png';
+import studioNamaThumb from './projectThumbnail/studioNama.png';
 
 export const profileInfo = {
   name: "Ritik Kumar",
@@ -144,6 +150,77 @@ export const projectsData = [
     mockupType: "music"
   },
   {
+    id: "astguard",
+    slug: "astguard",
+    number: "03",
+    title: "ASTGuard - Java Plagiarism Detector",
+    category: "FULL STACK",
+    categoryDisplay: "Full Stack · Java AST Analysis",
+    badge: "AST-Based Plagiarism Detection",
+    shortDescription: "A full-stack Java plagiarism detection platform that analyzes source code using Abstract Syntax Trees and compares programs based on their structural similarity.",
+    fullDescription: "A web-based Java code plagiarism detection system built to compare two Java programs using Abstract Syntax Tree analysis. The platform parses Java source code, generates AST representations, compares their structural structure using tree-based similarity analysis, and provides function-level similarity results with interactive AST visualization.",
+    problemStatement: "Traditional plagiarism detection methods often rely heavily on text matching, making them less effective when students rename variables, modify formatting, reorder code, or make small syntactic changes while keeping the underlying program structure similar.",
+    solutionStatement: "Built an AST-based plagiarism detection platform that analyzes the structural representation of Java programs instead of relying only on raw text. The system parses Java code, compares AST structures using tree edit distance, calculates similarity, and visualizes the detected structure through an interactive interface.",
+    keyFeatures: [
+      "Java source code comparison using Abstract Syntax Trees",
+      "Structural similarity detection beyond simple text matching",
+      "Zhang-Shasha Tree Edit Distance based comparison",
+      "Function-level similarity analysis",
+      "Interactive AST visualization",
+      "Java source code parsing and AST generation",
+      "REST API for plagiarism analysis",
+      "Responsive React-based user interface",
+      "Side-by-side code comparison workflow"
+    ],
+    techStack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "Java Parser",
+      "React Flow",
+      "Dagre",
+      "Axios"
+    ],
+    techStackText: "React · Vite · Tailwind CSS · Node.js · Express · Java Parser · React Flow · Dagre",
+    architecture: [
+      {
+        step: "Code Input",
+        detail: "The React frontend accepts two Java source programs and sends them to the backend through a REST API."
+      },
+      {
+        step: "Java Parsing",
+        detail: "The backend processes the submitted Java source code and generates Abstract Syntax Tree representations."
+      },
+      {
+        step: "AST Comparison",
+        detail: "The generated AST structures are compared using tree-based structural similarity analysis and Zhang-Shasha Tree Edit Distance."
+      },
+      {
+        step: "Similarity Analysis",
+        detail: "The system calculates overall and function-level structural similarity between the submitted Java programs."
+      },
+      {
+        step: "Visualization",
+        detail: "React Flow and Dagre are used to represent AST structures interactively so users can understand the structural relationship between programs."
+      }
+    ],
+    challenges: [
+      "Parsing Java source code into reliable Abstract Syntax Tree structures",
+      "Comparing complex tree structures efficiently using tree edit distance",
+      "Detecting structural similarity even when source code formatting or naming changes",
+      "Representing AST structures clearly through an interactive visualization",
+      "Connecting the React frontend with the backend plagiarism analysis API"
+    ],
+    result: "Delivered a full-stack AST-based Java plagiarism detection platform capable of analyzing source code structure, calculating similarity, performing function-level comparison, and presenting AST structures through an interactive visualization.",
+    githubLink: "https://github.com/Ritik70k/plagiarism-detector",
+    liveLink: "https://plagiarismdetector.netlify.app/",
+    featured: true,
+    thumbnail: plagiarismThumb,
+    mockupType: "plagiarism"
+  },
+  {
     id: "image-editor",
     slug: "image-editor",
     number: "01",
@@ -178,7 +255,7 @@ export const projectsData = [
     githubLink: "https://github.com/Ritik70k/Minor-projects/tree/main/Image%20Editor",
     liveLink: "https://ritik70k.github.io/Minor-projects/Image%20Editor/",
     featured: true,
-    // thumbnail: musicAppThumb,
+    thumbnail: imageEditorThumb,
     mockupType: "editor"
   },
   {
@@ -215,6 +292,7 @@ export const projectsData = [
     githubLink: "https://github.com/Ritik70k/Notes-App-ReactJs",
     liveLink: "https://ritik70k.github.io/Notes-App-ReactJs/",
     featured: true,
+    thumbnail: notesApplicationThumb,
     mockupType: "notes"
   },
   {
@@ -251,6 +329,7 @@ export const projectsData = [
     githubLink: "https://github.com/Ritik70k/Expense-Tracker",
     liveLink: "https://ritik70k.github.io/Expense-Tracker/",
     featured: false,
+    thumbnail: expenseTrackerThumb,
     mockupType: "finance"
   },
   {
@@ -287,78 +366,8 @@ export const projectsData = [
     githubLink: "https://github.com/Ritik70k/Minor-projects/tree/main/kanban%20board",
     liveLink: "https://ritik70k.github.io/Minor-projects/kanban%20board/",
     featured: false,
+    thumbnail: kanbanBoardThumb,
     mockupType: "kanban"
-  },
-  {
-    id: "email-validator",
-    slug: "email-validator",
-    number: "05",
-    title: "Email & Password Validator",
-    category: "EXPERIMENTS",
-    categoryDisplay: "JavaScript · Security Experiment",
-    badge: "Security Utility",
-    shortDescription: "Real-time client-side authentication validator with live password strength metrics and visual regex feedback.",
-    fullDescription: "A sleek security component built with HTML, CSS, and JS. Evaluates real-time regex format compliance for email addresses and tests password strength across uppercase, lowercase, numbers, special characters, and minimum length requirements.",
-    problemStatement: "Poor form validation feedback leads to bad user experiences and security vulnerabilities during signup/login workflows.",
-    solutionStatement: "Constructed an interactive validation engine using regular expressions (Regex) that feeds instant visual progress indicators as the user types.",
-    keyFeatures: [
-      "Real-time regex evaluation for valid email format structure",
-      "Dynamic password strength meter (Weak, Medium, Strong)",
-      "Visual rule checkers for uppercase, lowercase, digits, and special characters",
-      "Toggleable password visibility feature",
-      "Accessible error messaging and clean minimal container"
-    ],
-    techStack: ["JavaScript (ES6+)", "Regular Expressions (Regex)", "CSS Animations", "UX Validation"],
-    techStackText: "JavaScript · Regex · CSS Animations · UX Validation",
-    architecture: [
-      { step: "Input Event Stream", detail: "Listens to input events on target text fields" },
-      { step: "Regex Evaluation Matrix", detail: "Tests pattern array against current value string" },
-      { step: "UI Indicator Update", detail: "Toggles checkmark classes & calculates strength bar width" }
-    ],
-    challenges: [
-      "Formulating comprehensive Regex patterns that cover international email formats without edge-case false negatives"
-    ],
-    result: "Created a reusable authentication UI utility component for web forms.",
-    githubLink: "https://github.com/Ritik70k/Minor-projects/tree/main/Email%20and%20Password%20validator",
-    liveLink: "https://ritik70k.github.io/Minor-projects/Email%20and%20Password%20validator/",
-    featured: false,
-    thumbnail: plagiarismThumb,
-    mockupType: "validator"
-  },
-  {
-    id: "image-slider",
-    slug: "image-slider",
-    number: "06",
-    title: "Interactive Carousel Slider",
-    category: "EXPERIMENTS",
-    categoryDisplay: "JavaScript · UI Component",
-    badge: "UI Showcase",
-    shortDescription: "A responsive image slider with smooth slide animations, prev/next controls, dot indicators, and autoplay.",
-    fullDescription: "A modern responsive slider library crafted with Vanilla JavaScript and CSS keyframes. Offers fluid carousel transitions, touch swipe gesture support, thumbnail indicators, pause-on-hover autoplay, and lightweight code footprint.",
-    problemStatement: "Heavy third-party carousel plugins bloat bundle size and introduce layout shifts on mobile devices.",
-    solutionStatement: "Designed a 2KB Vanilla JavaScript carousel leveraging CSS transforms and `requestAnimationFrame` for buttery-smooth 60fps slide transitions.",
-    keyFeatures: [
-      "Fluid 60fps CSS transform slide transitions",
-      "Autoplay feature with pause-on-hover logic",
-      "Interactive dot navigation indicators & manual prev/next arrows",
-      "Fully responsive touch gesture support",
-      "Zero external dependency footprint"
-    ],
-    techStack: ["JavaScript (ES6+)", "CSS Transforms & Animations", "HTML5"],
-    techStackText: "JavaScript · CSS Transforms · HTML5",
-    architecture: [
-      { step: "Index Pointer", detail: "Tracks active slide index (0 to N-1)" },
-      { step: "Transform Offset", detail: "Computes translateX(-index * 100%) on slide container" },
-      { step: "Timer Loop", detail: "setInterval handles automatic slide progression" }
-    ],
-    challenges: [
-      "Preventing slide skip glitches when rapid clicking previous/next buttons during transition animations"
-    ],
-    result: "Engineered an ultra-fast reusable carousel component.",
-    githubLink: "https://github.com/Ritik70k/Minor-projects/tree/main/img%20Slider",
-    liveLink: "https://ritik70k.github.io/Minor-projects/img%20Slider/",
-    featured: false,
-    mockupType: "slider"
   },
   {
     id: "omnifood-clone",
@@ -392,7 +401,88 @@ export const projectsData = [
     githubLink: "https://github.com/Ritik70k/Web-clones/tree/main/omnifood-clone",
     liveLink: "https://ritik70k.github.io/Web-clones/omnifood-clone/",
     featured: false,
+    thumbnail: omnifoodThumb,
     mockupType: "omnifood"
+  },
+  {
+    id: "studio-namma-clone",
+    slug: "studio-namma-clone",
+    number: "08",
+    title: "Studio Namma Web Clone",
+    category: "UI / CLONES",
+    categoryDisplay: "HTML / CSS / JS · Web Clone",
+    badge: "Creative Agency Clone",
+
+    shortDescription: "A creative agency website clone featuring bold typography, video interactions, custom cursor effects, hover previews, and immersive layouts.",
+
+    fullDescription: "A detailed frontend recreation of the Studio Namma creative agency website using HTML5, CSS3, and JavaScript. The clone focuses on typography-driven layouts, fullscreen video sections, custom cursor interactions, image stack hover effects, animated service previews, and an overlay navigation menu.",
+
+    problemStatement: "Recreating a modern creative agency website requires more than static layouts, especially when the original experience relies heavily on custom cursor interactions, video previews, hover animations, typography, and responsive visual composition.",
+
+    solutionStatement: "Built the interface from scratch using semantic HTML, custom CSS, and vanilla JavaScript, implementing interactive cursor behavior, hover-based image stacks, service video previews, fullscreen video sections, and an animated overlay menu.",
+
+    keyFeatures: [
+      "Bold typography-driven creative agency hero section",
+      "Custom animated cursor with contextual hover states",
+      "Fullscreen Vimeo video showcase section",
+      "Cursor-following video preview interaction",
+      "Interactive image stack hover effects",
+      "Animated service list with video previews",
+      "Service descriptions revealed on hover",
+      "Overlay navigation menu with open/close interaction",
+      "Interactive WORK / WORK FROM MOON / WORK FROM ANYWHERE / WORK FROM MARS cursor labels",
+      "Responsive layouts using modern CSS techniques"
+    ],
+
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "GSAP",
+      "Vimeo",
+      "Web Design"
+    ],
+
+    techStackText: "HTML5 · CSS3 · JavaScript · GSAP · Vimeo · Web Design",
+
+    architecture: [
+      {
+        step: "Hero Experience",
+        detail: "A fullscreen typography-based hero section introduces the creative agency concept with large responsive text and custom cursor interactions."
+      },
+      {
+        step: "Video Showcase",
+        detail: "A large embedded Vimeo video section provides an immersive visual presentation as part of the main landing page experience."
+      },
+      {
+        step: "Interactive Content",
+        detail: "Hover-triggered image stacks respond to cursor movement and create layered visual effects around highlighted words."
+      },
+      {
+        step: "Service Interaction",
+        detail: "Service items dynamically update a floating video preview and description when the user hovers over different services."
+      },
+      {
+        step: "Navigation",
+        detail: "A fullscreen overlay menu can be opened and closed through the custom MENU/CLOSE interaction."
+      }
+    ],
+
+    challenges: [
+      "Creating a custom cursor that follows mouse movement and changes behavior across different interactive sections",
+      "Building layered image stack animations that respond dynamically to cursor position",
+      "Implementing floating service video previews synchronized with hovered menu items",
+      "Recreating typography-heavy layouts while maintaining responsive behavior",
+      "Combining video content, hover interactions, and overlay navigation into a cohesive frontend experience"
+    ],
+
+    result: "Successfully built an immersive creative agency website clone with interactive cursor effects, video previews, typography-focused layouts, hover animations, and custom navigation using HTML, CSS, and JavaScript.",
+
+    githubLink: "https://github.com/Ritik70k/Web-clones/tree/main/studioNama",
+    liveLink: "https://ritik70k.github.io/Web-clones/studioNama/",
+    featured: false,
+    thumbnail: studioNamaThumb,
+    mockupType: "studio-namma"
   }
 ];
 

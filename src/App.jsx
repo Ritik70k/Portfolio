@@ -9,8 +9,8 @@ import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
 import Contact from './pages/Contact';
 import ProjectModal from './components/ProjectModal';
+import SmoothScroll from './components/SmoothScroll';
 
-// Helper component to reset scroll position on page change
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -26,6 +26,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#BDD9D7] text-[#03363D] antialiased selection:bg-[#0E7C7B] selection:text-white font-sans">
+      <SmoothScroll />
       <ScrollToTop />
       <Navbar />
 
@@ -42,7 +43,6 @@ export default function App() {
 
       <Footer />
 
-      {/* Optional Quick View Modal */}
       {selectedProject && (
         <ProjectModal
           project={selectedProject}
